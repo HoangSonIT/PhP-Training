@@ -1,0 +1,34 @@
+<?php
+    $myArray[0] = "John";
+    $myArray[1] = "<strong>Student</strong>";
+    $myArray[2] = 21;
+    $myArr = array(
+    'Footballer' => array('Jame', 'Ronaldo', 'Messi'),
+    'Gosu' => array('Ruller', 'Faker', 'Optimus'),
+    'Beatboxer' => array('Trung Bao','Alexinho', 'Alem')
+    );
+    $name = 'Ray';
+    $name2 = 'Parker';
+    $string= 'How many types of lip roll are there?';
+    $exp = substr($name2, strlen($name2) - 2); //take a part of string to do sth
+   echo "$myArray[0] is $myArray[2], he is a $myArray[1] and his favourite beatboxer is " . $myArr['Beatboxer'][0]. "<br>";
+   echo "length of this string is: ".strlen($string)."<br>";
+   echo "In Vietnemese, the word 'huh' is '" . $exp . "' <br>";
+   
+   // explode() = split() and implode() = join() and array_merge = concat()
+   $newArr = "3,2,55,6,64,25,97,45,12,46,35,96,85,74,98";
+   $fixArr = explode(",", $newArr); // split string to array
+   echo "the random number is $fixArr[1] <br>";
+   
+   $fixArr2 = implode(",", $fixArr); //To join back an array to a single string 
+   echo "All number are $fixArr2 <br>";
+   
+   $countArr = count($fixArr);
+   echo "Sum whole  amount numbers: ".$countArr."<br>";
+   
+   if(array_key_exists('Gosu', $myArr)){ // check key within array, can use array_values and array_keys to call values or key => array(keys,...) or array(values,...);
+       echo "say oh yeah";
+   } else {
+       echo "No more";
+   }
+?>
