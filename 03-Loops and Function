@@ -1,0 +1,48 @@
+<?php
+    $number = [1,2,3,4,5,6,7,8,9,10];
+    $name = [
+        "Son" => "224-556-889",
+        "Father" => "224-889-996",
+        "Mother" => "224-648-885"
+        
+        ];
+    //for loop statement pratice
+    echo"<strong>for loop</strong> statement results: <br>";
+    for($i = 0; $i < count($number); $i+=1){
+        if($number[$i] % 2 == 0){
+        echo $number[$i] . "<br>";
+    }else{
+        echo "odd number" . "<br>";
+    }
+    }
+    //foreach statemant pratice
+    echo "<b>for each</b> statement results: <br>";
+    foreach($number as $numbers){
+        if($numbers % 3 == 0){echo $numbers . "<br>";}
+    }
+    echo "and <br>";
+    foreach($name as $family_name => $number_phone){ // keys => values
+        echo "$family_name 's number is $number_phone <br>"; 
+    }
+    //while loop statement pratice
+    echo "<b>While loop</b> statement results: <br>";
+    $counter = 10;
+    while ($counter >0){
+        $counter--;
+        echo $counter . "--";
+    }
+    $continue_break = 0;
+    while($continue_break < 10){
+        $continue_break++;
+        if($continue_break % 2 == 0){
+            echo "<br> Even number: $continue_break"; 
+            continue; // continue statement
+        }
+        if($continue_break > 4){
+            echo "<br> The last number is 5";
+            break; // break statement
+        }
+        echo "<br> Odd number: $continue_break";
+    }
+    
+?>
