@@ -1,0 +1,25 @@
+<?php 
+$server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'db_practice';
+//connect
+$conn = mysqli_connect($server,$username,$password,$database);
+//check connection
+if (!$conn) { //check error from connection
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+$sql = "SELECT * FROM db_user";
+$result = mysqli_query($conn,$sql);
+if(!$result){
+    die(" Lỗi ".mysqli_error($conn));
+}
+if(mysqli_num_rows($result) > 0){ // if database has row, it will be call
+    while ($row = mysqli_fetch_assoc($result)){
+        echo "<pre>";
+        print_r($row);
+        echo "</pre>";
+    }
+}
+?>
